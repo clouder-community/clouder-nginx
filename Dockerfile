@@ -6,6 +6,7 @@ RUN apt-get -qq update && DEBIAN_FRONTEND=noninteractive apt-get -y -q install s
 RUN sed -i -e"s/keepalive_timeout\s*65/keepalive_timeout 2/" /etc/nginx/nginx.conf
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 RUN chsh -s /bin/bash www-data
+RUN mkdir /run/php
 #RUN mkdir /var/www
 RUN chown www-data:www-data /var/www/
 RUN echo "[supervisord]" >> /etc/supervisor/conf.d/supervisord.conf
