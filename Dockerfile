@@ -8,6 +8,6 @@ RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 #RUN chsh -s /bin/bash www-data
 RUN mkdir /run/php
 #RUN mkdir /var/www
-RUN chown www-data:www-data /var/www/
+#RUN chown www-data:www-data /var/www/
 
 CMD ["nginx", "-g", "daemon off;"]
